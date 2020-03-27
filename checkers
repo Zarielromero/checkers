@@ -1,0 +1,28 @@
+import turtle;
+
+#read.Me
+
+checkerboard = turtle.Turtle();checkerboard.penup();checkerboard.setpos(-200,200);checkerboard.pendown();checkerboard.color("red");checkerboard.begin_fill()
+for i in range(4): #board
+  checkerboard.forward(400);
+  checkerboard.right(90)
+posX = -200;
+posY = 200;
+a = 1;
+b = 1;
+checkerboard.end_fill();
+checkerboard.color("black") #square1
+for x in range (8):
+  checkerboard.pendown()
+  for x3 in range(4):
+    checkerboard.begin_fill()
+    for x2 in range(4):
+      checkerboard.forward(50);
+      checkerboard.right(90)
+    checkerboard.end_fill();
+    checkerboard.penup();
+    checkerboard.forward(100) #row1
+  posX = posX + 50*(b);
+  posY = posY - 50;
+  b = b * -1;
+  checkerboard.setpos(posX,posY)
